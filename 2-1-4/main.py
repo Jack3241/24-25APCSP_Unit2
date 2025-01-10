@@ -4,16 +4,16 @@ import tkinter as tk
 
 # main window
 root = tk.Tk()
-root.wm_geometry("500x200")
+root.wm_geometry("500x300")
 
 # create empty frame
 frame_login = tk.Frame(root)
 frame_auth = tk.Frame(root)
+frame_login.grid(column=0, row=0, stick="news")
 frame_auth.grid(column=0, row=0, stick="news")
 
 
 #(new window for components in toot)
-frame_login.grid()
 
 
 def login():
@@ -39,7 +39,7 @@ ent_password.pack(pady=5)
 button_login = tk.Button(frame_login, text="login", command=login)
 button_login.pack(pady=5)
 
-lbl_authorized = tk.Label(frame_login, text="Authorization Screen", fg="blue", font="Helvetica 20")
+lbl_authorized = tk.Label(frame_auth, text="Authorization Screen", fg="black", font="Helvetica 20")
 lbl_authorized.pack(padx=185)
 
 
