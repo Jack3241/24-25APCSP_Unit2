@@ -4,22 +4,37 @@ import tkinter as tk
 
 # main window
 root = tk.Tk()
-root.wm_geometry("200x200")
+root.wm_geometry("500x200")
 
 # create empty frame
 frame_login = tk.Frame(root)
+frame_auth = tk.Frame(root)
 
 #(new window for components in toot)
 frame_login.grid()
 
+
+def login():
+
+
 #Widgets for frame login
 lbl_username = tk.Label(frame_login, text="Username", fg="red", font="Helvetica 20")
-lbl_username.pack(padx=35,pady=50)
+lbl_username.pack(padx=35)
 
 #Text box for username
 ent_username = tk.Entry(frame_login, bd=3)
 ent_username.pack(pady=5)
 
+#Widgeets frane log
+lbl_password = tk.Label(frame_login, text="Password", fg="blue", font="Helvetica 20")
+lbl_password.pack(padx=185)
 
+#Text box for password
+ent_password = tk.Entry(frame_login, bd=3)
+ent_password.pack(pady=5)
+
+
+button_login = tk.Button(frame_login, text="login", command=login)
+button_login.pack(pady=5)
 
 root.mainloop()
