@@ -1,4 +1,4 @@
-#   rsa.py
+ #   rsa.py
 #   Implementation of RSA cryptography using samples of large numbers
 import random
 import sys
