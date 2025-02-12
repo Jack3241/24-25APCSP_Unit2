@@ -32,4 +32,21 @@ def two_word(password):
         return True, guesses
   return False, guesses
 
+# analyze a two-word and a digit password
+def two_word_and_digit(password):
+  words = get_dictionary()
+  guesses = 0
+  numbers = [1,2,3,4,5,6,7,8,9,0]
+  # get each word from the dictionary file
+  for w in words:
+    for h in words:
+      for n in numbers:
+        guesses += 1
+        if w + h + str(n)== password:
+          return True, guesses
+        if str(n) + w + h == password:
+          return True, guesses
+  return False, guesses
+
+
 
